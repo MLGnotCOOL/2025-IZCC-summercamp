@@ -885,6 +885,7 @@ section,
 
 .hero .icon-box:hover {
   border-color: var(--accent-color);
+  transform: scale(1.05);
 }
 
 .hero .icon-box:hover h3 a {
@@ -1691,9 +1692,14 @@ section,
   color: var(--accent-color);
 }
 
-/*--------------------------------------------------------------
-# Starter Section Section
---------------------------------------------------------------*/
-/* .starter-section {
-  Add your styles here 
-} */
+.img-fluid {
+ transition: transform .3s;
+}
+
+.img-fluid:hover {
+  transform: scale(1.05);
+}
+
+.fixed-img {
+  transform: scale(1.2);
+}
