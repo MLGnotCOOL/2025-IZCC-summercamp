@@ -46,7 +46,7 @@
 
 .dark-background {
   --background-color: #060606;
-  --default-color: #ffffff;
+  --default-color: #ffffff9c;
   --heading-color: #ffffff;
   --surface-color: #252525;
   --contrast-color: #2a2727;
@@ -85,58 +85,6 @@ h5,
 h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
-}
-
-/* PHP Email Form Messages
-------------------------------*/
-.php-email-form .error-message {
-  display: none;
-  background: #df1529;
-  color: #ffffff;
-  text-align: left;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
-.php-email-form .sent-message {
-  display: none;
-  color: #ffffff;
-  background: #059652;
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
-.php-email-form .loading {
-  display: none;
-  background: var(--surface-color);
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-}
-
-.php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid var(--accent-color);
-  border-top-color: var(--surface-color);
-  animation: php-email-form-loading 1s linear infinite;
-}
-
-@keyframes php-email-form-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 /*--------------------------------------------------------------
@@ -235,9 +183,11 @@ h6 {
   .navmenu ul {
     margin: 0;
     padding: 0;
+    width: 800px;
     display: flex;
     list-style: none;
     align-items: center;
+    justify-content: space-evenly;
   }
 
   .navmenu li {
@@ -248,9 +198,13 @@ h6 {
   .navmenu a:focus {
     color: var(--nav-color);
     padding: 18px 15px;
-    font-size: 16px;
+    font-size: 24px;
     font-family: var(--nav-font);
     font-weight: 400;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5),
+                 1px -1px 0 rgba(0, 0, 0, 0.5),
+                 -1px 1px 0 rgba(0, 0, 0, 0.5),
+                 1px 1px 0 rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -266,9 +220,9 @@ h6 {
     transition: 0.3s;
   }
 
-  .navmenu li:last-child a {
+  /* .navmenu li:last-child a {
     padding-right: 0;
-  }
+  } */
 
   .navmenu li:hover>a,
   .navmenu .active,
@@ -276,7 +230,7 @@ h6 {
     color: var(--nav-hover-color);
   }
 
-  .navmenu .dropdown ul {
+  /* .navmenu .dropdown ul {
     margin: 0;
     padding: 10px 0;
     background: var(--nav-dropdown-background-color);
@@ -330,8 +284,8 @@ h6 {
     top: 0;
     left: -100%;
     visibility: visible;
-  }
-}
+  }*/
+} 
 
 /* Navmenu - Mobile */
 @media (max-width: 1199px) {
@@ -350,6 +304,7 @@ h6 {
   }
 
   .navmenu ul {
+    height:250px;
     display: none;
     list-style: none;
     position: absolute;
@@ -800,11 +755,12 @@ section,
 /*--------------------------------------------------------------
 # home
 --------------------------------------------------------------*/
+
 .hero {
   width: 100%;
   min-height: 100vh;
   position: relative;
-  padding: 120px 0 80px 0;
+  padding: 120px 0 0 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -815,14 +771,14 @@ section,
   inset: 0;
   display: block;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   object-fit: cover;
-  z-index: 1;
+  z-index: 0;
 }
 
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 30%);
+  background: color-mix(in srgb, var(--background-color), transparent 50%);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -831,11 +787,13 @@ section,
 .hero .container {
   position: relative;
   z-index: 3;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 .hero h2 {
   margin: 0;
-  font-size: 56px;
+  font-size: 64px;
   font-weight: 700;
   font-family: var(--nav-font);
 }
@@ -844,18 +802,30 @@ section,
   color: var(--accent-color);
 }
 
+
 .hero p {
   margin: 10px 0 0 0;
   font-size: 24px;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
+.hero .button{
+  margin: auto;
+  width: 600px;
+  justify-content: space-evenly;
+}
+
+#button2{
+  margin-bottom: 5px;
+}
+
 .hero .icon-box {
-  padding: 30px 30px;
+  padding: 30px 0 30px 0;
   transition: ease-in-out 0.3s;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 70%);
-  height: 100%;
-  width: 102.5%;
+  background-color: color-mix(in srgb, var(--contrast-color), transparent 80%);
+  border: 3px solid color-mix(in srgb, var(--default-color), transparent 5%);
+  height: 108px;
+  width: 218px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -874,7 +844,7 @@ section,
   margin: 0 0 0 0;
   padding: 0;
   line-height: 1;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 26px;
 }
 
@@ -885,16 +855,41 @@ section,
 
 .hero .icon-box:hover {
   border-color: var(--accent-color);
-  transform: scale(1.05);
+  background-color: color-mix(in srgb, var(--accent-color), transparent 30%);
 }
 
 .hero .icon-box:hover h3 a {
   color: var(--accent-color);
 }
 
+
 @media (max-width: 768px) {
+  .hero {
+    min-height: 100vh;
+  }
+
+  .hero img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  .hero .button{
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .hero .icon-box {
+    height: 97px;
+    width: 195px;
+  }
+
   .hero h2 {
-    font-size: 32px;
+    font-size: 48px;
   }
 
   .hero p {
@@ -954,12 +949,12 @@ section,
 .features h3{
   font-weight: 700;
   font-size: 48px;
-  margin-left: 15px;
+  margin-left: 5px;
 }
 
 .features h4{
   font-weight: 450;
-  margin-left: 15px;
+  margin-left: 5px;
   margin-bottom: 20px;
 }
 
@@ -1012,6 +1007,7 @@ section,
 .services .container h4{
   font-weight: 450;
   margin-bottom: 20px;
+  line-height: 1.5;
 }
 
 .services .container h5{
@@ -1022,7 +1018,7 @@ section,
 
 .services .container h6{
   content: "";
-    width: 650px;
+    width: 200px;
     height: 1px;
     display: inline-block;
     background: var(--accent-color);
@@ -1079,6 +1075,7 @@ section,
 --------------------------------------------------------------*/
 .portfolio{
   margin-bottom: 100px;
+  justify-content: center;
 }
 
 .portfolio h2{
@@ -1353,7 +1350,7 @@ section,
 }
 
 .team .team-member .social a {
-  background: color-mix(in srgb, var(--contrast-color), transparent 25%);
+  background: color-mix(in srgb, var(--accent-color), transparent 50%);
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin: 0 3px;
   border-radius: 4px;
