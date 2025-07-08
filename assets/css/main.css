@@ -815,10 +815,6 @@ section,
   justify-content: space-evenly;
 }
 
-#button2{
-  margin-bottom: 5px;
-}
-
 .hero .icon-box {
   padding: 30px 0 30px 0;
   transition: ease-in-out 0.3s;
@@ -1695,8 +1691,21 @@ section,
 
 .img-fluid:hover {
   transform: scale(1.05);
+  box-shadow: 0px 0 25px 2px rgba(0, 0, 0, 0.1);
 }
 
 .fixed-img {
   transform: scale(1.2);
+}
+
+.darken-bg {
+  filter: brightness(50%);
+}
+
+#button1 {
+  margin-top: -20px;
+}
+
+#button2 {
+  margin-top: -20px;
 }
