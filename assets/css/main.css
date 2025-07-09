@@ -1729,7 +1729,7 @@ section,
 }
 
 .hero {
-  background: url("/assets/img/IZCC_summercamp_pic.png");
+  background-image: url("./../img/IZCC_summercamp_pic.png");
   background-attachment: fixed;
   position: relative;
   background-position: center;
