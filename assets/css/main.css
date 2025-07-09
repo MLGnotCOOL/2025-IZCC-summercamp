@@ -1731,11 +1731,28 @@ section,
 
 .hero {
   background-image: url("./../img/IZCC_summercamp_pic.png");
-  background-attachment: fixed;
-  position: relative;
-  background-position: center;
- 
-  width: 100%;
-  height: 100vh;
-  background-size: cover;
+}
+
+
+@media (min-width: 768px) {
+  .hero {
+    background-attachment: fixed;
+    position: relative;
+    background-position: center;
+  
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    position: relative;
+    background-position: center;
+  
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+  }
 }
