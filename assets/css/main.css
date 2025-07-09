@@ -293,9 +293,10 @@ h6 {
     color: var(--nav-color);
     font-size: 28px;
     line-height: 0;
-    margin-right: 10px;
     cursor: pointer;
     transition: color 0.3s;
+
+    margin-right: 90vw;
   }
 
   .navmenu {
