@@ -644,7 +644,11 @@ h6 {
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
-
+@media screen and (max-width: 768px) {
+  [data-aos-delay] {
+    transition-delay: 0 !important;
+  }
+}
 
 /*--------------------------------------------------------------
 # Global Page Titles & Breadcrumbs
@@ -1725,10 +1729,11 @@ section,
 }
 
 .hero {
+  background: url("/assets/img/IZCC_summercamp_pic.png");
   background-attachment: fixed;
   position: relative;
   background-position: center;
-  background-image: url("./../img/IZCC_summercamp_pic.png");
+ 
   width: 100%;
   height: 100vh;
   background-size: cover;
