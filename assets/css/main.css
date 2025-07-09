@@ -1686,11 +1686,21 @@ section,
 }
 
 .img-fluid {
- transition: transform .3s;
+  transition: transform .3s;
 }
 
 .img-fluid:hover {
-  transform: scale(1.03);
+  transform: scale(1.02);
+  box-shadow: 0px 0 25px 2px rgba(0, 0, 0, 0.1);
+}
+
+.features-img {
+  transform: scale(0.95);
+  transition: transform .3s;
+}
+
+.features-img:hover {
+  transform: scale(0.97);
   box-shadow: 0px 0 25px 2px rgba(0, 0, 0, 0.1);
 }
 
@@ -1711,12 +1721,6 @@ section,
 }
 
 .main-btn {
-  font-size: 100px;
-}
-
-.main-txt {
-  display: inline;
-  white-space: nowrap;
   font-size: 100px;
 }
 
